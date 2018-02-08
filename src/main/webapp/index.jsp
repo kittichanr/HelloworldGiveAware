@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : Dec 10, 2017, 3:00:19 PM
-    Author     : yeen
---%>
-
 <%@page import="javax.websocket.OnOpen"%>
 <%@page import="java.util.List"%>
 <%@page import="model.HelloWorld"%>

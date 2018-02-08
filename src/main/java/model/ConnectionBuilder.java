@@ -23,6 +23,8 @@ public class ConnectionBuilder {
             InputStream input = classloader.getResourceAsStream("config.properties");
 
             prop.load(input);
+            
+            String PJ = prop.getProperty("jdbc.name");
 
             String DB = prop.getProperty("jdbc.db");
 
@@ -34,7 +36,7 @@ public class ConnectionBuilder {
 
             Class.forName("com.mysql.jdbc.Driver");
 
-            conn = DriverManager.getConnection("jdbc:mysql://" + DB + ":" + PORT + "/GiveAware?zeroDateTimeBehavior=convertToNull", USERNAME, PASSWORD);
+            conn = DriverManager.getConnection("jdbc:mysql://" + DB + ":" + PORT + "/"+PJ+"?zeroDateTimeBehavior=convertToNull", USERNAME, PASSWORD);
 
         } catch (SQLException | ClassCastException | IOException err) {
 
