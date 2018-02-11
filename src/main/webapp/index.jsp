@@ -9,12 +9,8 @@
         <title>HelloWorld</title>
     </head>
     <body>
-        <% String message = (String) request.getAttribute("hd");
-        %>
-        <%
-            HelloWorld hd = new HelloWorld();
-            message = hd.showMessage();
-        %>
-        <h1><%=message%></h1>
+        
+        <h1>${helloWorld.message}</h1>
+
     </body>
 </html>

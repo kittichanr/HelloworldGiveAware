@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.HelloWorld;
+import static model.HelloWorld.getHelloWorld;
 
 /**
  *
@@ -31,12 +32,12 @@ public class HelloServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-//        
-        HelloWorld hd = new HelloWorld();
-        String mss = hd.showMessage();
-        request.setAttribute("hd", mss);
 
-        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+        String target = "/index.jsp";
+        HelloWorld helloWorld = getHelloWorld();
+        request.setAttribute("helloWorld", helloWorld);
+
+        getServletContext().getRequestDispatcher(target).forward(request, response);
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

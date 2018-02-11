@@ -18,44 +18,43 @@ import java.util.ArrayList;
  */
 public class HelloWorld {
 
-    private int idName;
-    private String name;
+    private int id;
+    private String message;
 
     public HelloWorld(ResultSet rs) throws SQLException {
-        idName = rs.getInt("idName");
-        name = rs.getString("name");
+        id = rs.getInt("idName");
+        message = rs.getString("name");
     }
 
     public HelloWorld() {
     }
 
-    public String getMessageName() {
-        return name;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMessageName(String messageName) {
-        this.name = messageName;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public String showMessage() {
-        String SQL = "SELECT * FROM HelloWorld";
-        Connection con = null;
-        String world = "";
+    public static HelloWorld getHelloWorld() {
+        HelloWorld helloWorld = null;        
+        String sql = "SELECT * FROM HelloWorld";
         try {
-            con = (Connection) ConnectionBuilder.getConnection();
-            PreparedStatement ps = con.prepareStatement(SQL);
+            Connection con = (Connection) ConnectionBuilder.getConnection();
+            PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                world = rs.getString("name");
-            }
+            if(rs.next()){
+                helloWorld = new HelloWorld(rs);
+            }           
         } catch (Exception e) {
             System.out.println(e);
         }
-        return world;
+        return helloWorld;
     }
 
     public static void main(String[] args) {
-        HelloWorld hw = new HelloWorld();
-        System.out.println(hw.showMessage());
+        HelloWorld hw = getHelloWorld();
+        System.out.println(hw.getMessage());
     }
 }
