@@ -21,7 +21,8 @@ public class ENVContextListener implements ServletContextListener {
     
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        String pathProject = System.getenv("GiveAware"); // get path that set in catalina file 
+        String varProjectPath = "path_giveaware";
+        String pathProject = System.getenv(varProjectPath); // get path that set in catalina file 
         DotEnv.setDotEnv(Dotenv.configure().directory(pathProject).load()); //configure java-dotenv directory
         setEnvtoDatabaseConnection();
     }
