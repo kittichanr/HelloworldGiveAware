@@ -1,6 +1,6 @@
 ```bash
-set     PATH_PROJECT_SIGNATURE=.......             /// For Window
-export  PATH_PROJECT_SIGNATURE=.......             /// For Linux
+set     path_giveaware = ...........          /// For Window
+export  path_giveaware = ...........          /// For Linux
 ```
 
 ```bash
