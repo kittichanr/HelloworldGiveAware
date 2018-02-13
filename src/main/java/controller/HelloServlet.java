@@ -36,7 +36,6 @@ public class HelloServlet extends HttpServlet {
         String target = "/index.jsp";
         HelloWorld helloWorld = getHelloWorld();
         request.setAttribute("helloWorld", helloWorld);
-
         getServletContext().getRequestDispatcher(target).forward(request, response);
     }
 
