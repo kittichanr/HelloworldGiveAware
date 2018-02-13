@@ -6,7 +6,7 @@
 package model;
 
 import java.sql.Connection;
-import model.ConnectionBuilder;
+import utils.ConnectionBuilder;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
