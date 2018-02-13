@@ -10,7 +10,8 @@
     </head>
     <body>
         
-        <h1>${helloWorld.message}</h1>
+        <h1>GiveAware Project</h1>
+        <h1>Message: ${helloWorld.message}</h1>
 
     </body>
 </html>
