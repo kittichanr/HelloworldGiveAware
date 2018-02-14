@@ -1,8 +1,5 @@
-```bash
-
-```
 <h1>HelloWorld by GiveAware</h1> 
- Software Process Management Project<br/>
+ Software Process Management Subject<br/>
  วีดิโอทดสอบโปรเจค  https://youtu.be/X_OAM-YAF3A
 
 
@@ -30,7 +27,7 @@ copy .env.example .env
 ```
 เข้าไฟล์ .env แล้ว set path database
 ```bash
-DB_HOST =        // ip address ของ database ที่จะเข้าไปเชื่อมต่อ
+DB_HOST =        // ip address หรือ localhost ของ database ที่จะเข้าไปเชื่อมต่อ
 DB_PORT =        // port ของ database
 DB_NAME =        // ชื่อของ database
 DB_USERNAME =    // username ที่ใช้เข้าถึง database
@@ -42,8 +39,14 @@ deploy project
 ```bash
 mvn tomcat:deploy
 ```
-
-            
+เมื่อต้องการอัพเดตโปรเจคให้ใช้คำสั่ง
+```bash
+mvn tomcat:redeploy
+```
+เมื่อต้องการยกเลิกการ deploy ให้ใช้คำสั่ง
+```bash
+mvn tomcat:undeploy
+```          
 ***
 
 <h1>โครงสร้างฐานข้อมูลของโปรเจค</h1>
