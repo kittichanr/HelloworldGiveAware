@@ -47,6 +47,8 @@ mvn tomcat:redeploy
 ```bash
 mvn tomcat:undeploy
 ```          
+หรือ deploy Project ที่ IDE editor
+
 ***
 
 <h1>โครงสร้างฐานข้อมูลของโปรเจค</h1>
