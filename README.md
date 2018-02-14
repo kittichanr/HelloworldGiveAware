@@ -1,4 +1,4 @@
-```bash
+ ```bash
 
 ```
 <h1>HelloWorld by GiveAware</h1> 
@@ -13,14 +13,19 @@
 2. Tomcat
 ```
 <h1>ขั้นตอนการ Run Project</h1>
-**Step 1** </br>
-  Clone Project
-**Step 2** </br>
+ **Step1**<br/>
+Clone Project ลงเครื่อง<br/>
+ **Step2**<br/>
+นำ Path root project ไปใส่ใน Catalina.bat ที่อยู่ใน Tomcat โดย set ดังนี้<br/>
+ ```bash
+ set 
+ ```  
   
+***
 
 **Database** <br/>
-ขั้นตอนการสร้างตาราง HelloWorld
-1. เข้าไปที่ database Server
+ขั้นตอนการสร้างตาราง HelloWorld <br/>
+1. เข้าไปที่ database Server <br/>
 2. สร้าง Schema ชื่อ ...
 3. สร้างตาราง HelloWorld
 ```bash
