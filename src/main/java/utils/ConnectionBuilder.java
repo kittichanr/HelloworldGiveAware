@@ -69,20 +69,31 @@ public class ConnectionBuilder {
 
     public static void setDatabase(ConnectionBuilder builder) {
         try {
-            String dbDriver = "com.mysql.jdbc.Driver";
-            String connectionString = "jdbc:mysql://";
-            connectionString += builder.dbHost
-                    + ":"
-                    + builder.dbPort
-                    + "/"
-                    + builder.dbName
-                    + "?"
-                    + "useUnicode=true&characterEncoding=UTF-8"; //for reading Thai
+            String dbDriverLocalHost = "org.apache.derby.jdbc.ClientDriver";
+            String connectionLocalHost = "jdbc:derby://";
+            if (builder.dbHost.equalsIgnoreCase("localhost")) {
+                connectionLocalHost += builder.dbHost
+                        + ":"
+                        + builder.dbPort
+                        + "/"
+                        + builder.dbName;
+                Class.forName(dbDriverLocalHost);
+                connection = DriverManager.getConnection(connectionLocalHost,"root","password");
 
-            Class.forName(dbDriver);
-            connection = DriverManager.getConnection(connectionString, builder.dbUsername, builder.dbPassword);
-            System.out.println("connection in builder " + connection);
-            
+            } else {
+                String dbDriver = "com.mysql.jdbc.Driver";
+                String connectionString = "jdbc:mysql://";
+                connectionString += builder.dbHost
+                        + ":"
+                        + builder.dbPort
+                        + "/"
+                        + builder.dbName
+                        + "?"
+                        + "useUnicode=true&characterEncoding=UTF-8"; //for reading Thai
+
+                Class.forName(dbDriver);
+                connection = DriverManager.getConnection(connectionString, builder.dbUsername, builder.dbPassword);
+            }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ConnectionBuilder.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
