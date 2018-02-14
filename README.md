@@ -1,4 +1,5 @@
-เ<h1>HelloWorld by GiveAware</h1> 
+<h1>HelloWorld by GiveAware</h1>
+
  Software Process Management Subject<br/>
  วีดิโอทดสอบโปรเจค  https://youtu.be/X_OAM-YAF3A
 
@@ -21,17 +22,17 @@ set path_giveaware=..(your root path project).. // เข้าไฟล์ cata
 ```   
 ![xx](https://user-images.githubusercontent.com/18551344/36192570-b6395094-1194-11e8-8759-9f8531812988.jpg)
 **Step3**</br>
-สร้างไฟล์ env โดยไปที่ Cmd เข้า root path project พิมพ์คำสั่ง
-```bash
-copy .env.example .env
-```
-เข้าไฟล์ .env แล้ว set path database
+เข้าไปที่ไฟล์ .env.example แล้ว set path database
 ```bash
 DB_HOST =        // ip address หรือ localhost ของ database ที่จะเข้าไปเชื่อมต่อ
 DB_PORT =        // port ของ database
 DB_NAME =        // ชื่อของ database
 DB_USERNAME =    // username ที่ใช้เข้าถึง database
 DB_PASSWORD =    // password ที่ใช้เข้าถึง database
+```
+copy ไฟล์ .env.example แล้วแก้ชื่อเป็น .env ทำใน cmd เข้าไปที่ root path project แล้วพิมพ์คำสั่ง
+```bash
+copy .env.example .env
 ```
 **Step4**</br>
 deploy project
@@ -53,13 +54,20 @@ mvn tomcat:undeploy
 
 <h1>โครงสร้างฐานข้อมูลของโปรเจค</h1>
 
-create table helloworld</br>
-insert helloworld</br>
-sql command ดูได้ที่ HelloWorld.sql
+**Sql script**
+```bash
+CREATE TABLE HelloWorld (
+            idName int,
+            name varchar(255),
+	           primary key (idName) 
+            ); 
+INSERT INTO HelloWorld(idName,name)
+            VALUES (1,"HELLOWORLD");
+```
+
+หรือ เข้าไปดูได้ที่ **HelloWorld.sql** ที่แนบไว้ใน root path project
 
 
-
-***
 
 
 
