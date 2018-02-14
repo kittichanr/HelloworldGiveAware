@@ -1,23 +1,31 @@
-```bash
-set     PATH_PROJECT_SIGNATURE=.......             /// For Window
-export  PATH_PROJECT_SIGNATURE=.......             /// For Linux
-```
-
-```bash
+ ```bash
 
 ```
 <h1>HelloWorld by GiveAware</h1> 
  Software Process Management Project<br/>
  วีดิโอทดสอบโปรเจค  https://youtu.be/X_OAM-YAF3A
- 
 
+
+<h1>สิ่งที่ต้องมีก่อนรันโปรเจค</h1>
+
+```bash
+1. Marven
+2. Tomcat
+```
+<h1>ขั้นตอนการ Run Project</h1>
+ **Step1**<br/>
+Clone Project ลงเครื่อง<br/>
+ **Step2**<br/>
+นำ Path root project ไปใส่ใน Catalina.bat ที่อยู่ใน Tomcat โดย set ดังนี้<br/>
+ ```bash
+ set 
+ ```  
+  
 ***
-**ขั้นตอนการ Run Project**<br /> 
- ขั้นตอนที่1
 
 **Database** <br/>
-ขั้นตอนการสร้างตาราง HelloWorld
-1. เข้าไปที่ database Server
+ขั้นตอนการสร้างตาราง HelloWorld <br/>
+1. เข้าไปที่ database Server <br/>
 2. สร้าง Schema ชื่อ ...
 3. สร้างตาราง HelloWorld
 ```bash
