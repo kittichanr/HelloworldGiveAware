@@ -4,13 +4,10 @@
 <h1>HelloWorld by GiveAware</h1> 
  Software Process Management Project<br/>
  วีดิโอทดสอบโปรเจค  https://youtu.be/X_OAM-YAF3A
- 
 
-***
 
 <h1>สิ่งที่ต้องมีก่อนรันโปรเจค</h1>
 
-***
 ```bash
 1. Marven
 2. Tomcat
