@@ -1,4 +1,4 @@
- ```bash
+```bash
 
 ```
 <h1>HelloWorld by GiveAware</h1> 
@@ -9,51 +9,55 @@
 <h1>สิ่งที่ต้องมีก่อนรันโปรเจค</h1>
 
 ```bash
-1. Marven
-2. Tomcat
+1. Marven install
+2. Tomcat install
 ```
 <h1>ขั้นตอนการ Run Project</h1>
- **Step1**<br/>
-Clone Project ลงเครื่อง<br/>
- **Step2**<br/>
+
+<br>**Step1**<br/>
+Clone Project ลงเครื่อง<br/></br>
+**Step2**<br/>
 นำ Path root project ไปใส่ใน Catalina.bat ที่อยู่ใน Tomcat โดย set ดังนี้<br/>
- ```bash
- set 
- ```  
-  
-***
 
-**Database** <br/>
-ขั้นตอนการสร้างตาราง HelloWorld <br/>
-1. เข้าไปที่ database Server <br/>
-2. สร้าง Schema ชื่อ ...
-3. สร้างตาราง HelloWorld
 ```bash
-  Syntax -> CREATE TABLE HelloWorld (
-            idName int,
-            name varchar(255) 
-            ); 
- ```
-       
-4. เพิ่มค่า Helloworld ลง Table
+set GiveAware=..(your root path project).. // เข้าไฟล์ catalina.bat จาก Text editor (run admin)
+```   
+![xx](https://user-images.githubusercontent.com/18551344/36192570-b6395094-1194-11e8-8759-9f8531812988.jpg)
+**Step3**</br>
+สร้างไฟล์ env โดยไปที่ Cmd เข้า root path project พิมพ์คำสั่ง
+```bash
+copy .env.example .env
+```
+เข้าไฟล์ .env แล้ว set path database
+```bash
+DB_HOST =        // ip address ของ database ที่จะเข้าไปเชื่อมต่อ
+DB_PORT =        // ชื่อของ database
+DB_NAME =        // username ที่ใช้เข้าถึง database
+DB_USERNAME =    // password ที่ใช้เข้าถึง database
+DB_PASSWORD =    // port ของ database
+```
+**Step4**</br>
+deploy project
+เข้า Cmd ไปยัง root path project แล้วใช้คำสั่ง
+```bash
+mvn tomcat:deploy
+```
 
- ```bash
-  Syntax -> INSERT INTO HelloWorld(idName,name)
-            VALUES (1,"HELLOWORLD");
- ```
-5. ดึงค่าเพื่อมาแสดง
- ```bash
-  Syntax -> SELECT * FROM HelloWorld ;
- ```
+            
+***
+
+<h1>โครงสร้างฐานข้อมูลของโปรเจค</h1>
+
+create table helloworld</br>
+insert helloworld</br>
+sql command ดูได้ที่ HelloWorld.sql
 
 
 
 ***
 
-**Marven install**<br/>
 
 
-<img width="712" alt="searchcatalina" src="https://user-images.githubusercontent.com/18551344/36144557-0281a7b2-10e1-11e8-8ac7-b5cd6dafce14.png">
 
-<img width="721" alt="setpath" src="https://user-images.githubusercontent.com/18551344/36144559-02ba78da-10e1-11e8-8352-7a9afbcc0877.png">
+
             
