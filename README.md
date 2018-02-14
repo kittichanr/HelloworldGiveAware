@@ -31,10 +31,10 @@ copy .env.example .env
 เข้าไฟล์ .env แล้ว set path database
 ```bash
 DB_HOST =        // ip address ของ database ที่จะเข้าไปเชื่อมต่อ
-DB_PORT =        // ชื่อของ database
-DB_NAME =        // username ที่ใช้เข้าถึง database
-DB_USERNAME =    // password ที่ใช้เข้าถึง database
-DB_PASSWORD =    // port ของ database
+DB_PORT =        // port ของ database
+DB_NAME =        // ชื่อของ database
+DB_USERNAME =    // username ที่ใช้เข้าถึง database
+DB_PASSWORD =    // password ที่ใช้เข้าถึง database
 ```
 **Step4**</br>
 deploy project
