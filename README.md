@@ -1,4 +1,4 @@
-<h1>HelloWorld by GiveAware</h1> 
+เ<h1>HelloWorld by GiveAware</h1> 
  Software Process Management Subject<br/>
  วีดิโอทดสอบโปรเจค  https://youtu.be/X_OAM-YAF3A
 
@@ -17,7 +17,7 @@ Clone Project ลงเครื่อง<br/></br>
 นำ Path root project ไปใส่ใน Catalina.bat ที่อยู่ใน Tomcat โดย set ดังนี้<br/>
 
 ```bash
-set GiveAware=..(your root path project).. // เข้าไฟล์ catalina.bat จาก Text editor (run admin)
+set path_giveaware=..(your root path project).. // เข้าไฟล์ catalina.bat จาก Text editor (run admin)
 ```   
 ![xx](https://user-images.githubusercontent.com/18551344/36192570-b6395094-1194-11e8-8759-9f8531812988.jpg)
 **Step3**</br>
