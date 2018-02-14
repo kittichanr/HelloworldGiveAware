@@ -1,9 +1,4 @@
 ```bash
-set     path_giveaware = ...........          /// For Window
-export  path_giveaware = ...........          /// For Linux
-```
-
-```bash
 
 ```
 <h1>HelloWorld by GiveAware</h1> 
@@ -12,8 +7,19 @@ export  path_giveaware = ...........          /// For Linux
  
 
 ***
-**ขั้นตอนการ Run Project**<br /> 
- ขั้นตอนที่1
+
+<h1>สิ่งที่ต้องมีก่อนรันโปรเจค</h1>
+
+***
+```bash
+1. Marven
+2. Tomcat
+```
+<h1>ขั้นตอนการ Run Project</h1>
+**Step 1** </br>
+  Clone Project
+**Step 2** </br>
+  
 
 **Database** <br/>
 ขั้นตอนการสร้างตาราง HelloWorld
